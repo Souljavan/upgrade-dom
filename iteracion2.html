@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+	<h2 class="fn-insert-here"></h2>
+	<p class="fn-remove-me">Eliminame!</p>
+  <p>No me elimines!</p>
+  <p>No me elimines!</p>
+  <p class="fn-remove-me">Eliminame!</p>
+  <p>No me elimines!</p>
+  <p class="fn-remove-me">Eliminame!</p>
+  <p class="fn-remove-me">Eliminame!</p>
+  <p>No me elimines!</p>
+	<div></div><div></div>
+	<div class="fn-insert-here"></div>
+  <div class="fn-insert-here"></div>
+
+  <script>
+//2.1
+var nuevodiv = document.createElement('div');
+var body = document.querySelector('body');
+body.appendChild(nuevodiv);
+
+//2.2
+var nuevap = document.createElement('p');
+var body = document.querySelector('body');
+body.appendChild(nuevap);
+
+//2.3
+var nuevodiv = document.createElement('div');
+var body = document.querySelector('body');
+for (let i=0;i<6;i++){
+var nuevap = document.createElement('p');
+body.appendChild(nuevap);
+}
+
+//2.4
+var nuevap = document.createElement('p');
+var body = document.querySelector('body');
+nuevap.textContent='Soy dinámico!'
+body.appendChild(nuevap);
+
+//2.5
+var nuevoh2 = document.createElement('h2');
+nuevoh2.className = '.fn-insert-here';
+nuevoh2.textContent='Wubba Lubba dub dub';
+body.appendChild(nuevoh2);
+
+//2.6
+const apps = ['Facebook', 'Netflix', 'Instagram', 'Snapchat', 'Twitter'];
+let nuevoul = document.createElement('ul');
+for (elem of apps){
+let nuevoli=document.createElement('li');
+nuevoli.textContent=elem;
+nuevoul.appendChild(nuevoli)
+}
+body.appendChild(nuevoul);
+
+//2.7
+let list=document.querySelectorAll('.fn-remove-me')
+for (lis of list){
+lis.parentNode.removeChild(lis)
+}
+
+//2.8
+
+let list28=document.getElementsByTagName('div');
+console.log(list28)
+for (elem28 of list28){
+  console.log(elem28.className)
+  
+  if (!elem28.classList.contains("fn-insert-here")){
+  console.log(elem28);
+  var nuevap28 = document.createElement('p');
+  nuevap28.textContent='Voy en medio!';
+  elem28.appendChild(nuevap28);
+}
+}
+
+//2.9
+let list29=document.querySelectorAll('.fn-insert-here');
+for (elem29 of list29){
+  var nuevap29 = document.createElement('p');
+  nuevap29.textContent='Voy dentro!';
+  elem29.appendChild(nuevap29);
+}
+
+
+
+</script>
+
+
+
+</body>
+</html>
