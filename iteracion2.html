@@ -21,31 +21,31 @@
 
   <script>
 //2.1
-var nuevodiv = document.createElement('div');
-var body = document.querySelector('body');
+let nuevodiv = document.createElement('div');
+let body = document.querySelector('body');
 body.appendChild(nuevodiv);
 
 //2.2
-var nuevap = document.createElement('p');
-var body = document.querySelector('body');
+let nuevap = document.createElement('p');
+let body = document.querySelector('body');
 body.appendChild(nuevap);
 
 //2.3
-var nuevodiv = document.createElement('div');
-var body = document.querySelector('body');
+let nuevodiv = document.createElement('div');
+let body = document.querySelector('body');
 for (let i=0;i<6;i++){
-var nuevap = document.createElement('p');
+let nuevap = document.createElement('p');
 body.appendChild(nuevap);
 }
 
 //2.4
-var nuevap = document.createElement('p');
-var body = document.querySelector('body');
+let nuevap = document.createElement('p');
+let body = document.querySelector('body');
 nuevap.textContent='Soy dinámico!'
 body.appendChild(nuevap);
 
 //2.5
-var nuevoh2 = document.createElement('h2');
+let nuevoh2 = document.createElement('h2');
 nuevoh2.className = '.fn-insert-here';
 nuevoh2.textContent='Wubba Lubba dub dub';
 body.appendChild(nuevoh2);
@@ -75,7 +75,7 @@ for (elem28 of list28){
   
   if (!elem28.classList.contains("fn-insert-here")){
   console.log(elem28);
-  var nuevap28 = document.createElement('p');
+  let nuevap28 = document.createElement('p');
   nuevap28.textContent='Voy en medio!';
   elem28.appendChild(nuevap28);
 }
